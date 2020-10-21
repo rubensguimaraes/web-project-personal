@@ -1,0 +1,80 @@
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap";
+
+:root {
+  --color-green: #50fa7b;
+}
+
+* { /* Este seletor "*" alcança todos os elementos existentes no html */
+  margin: 0; /* Zeramos a margem */
+  padding: 0; /* Zeramos o padding */
+  border: 0; /* Zeramos o border */
+} /* Com isto acima, ressetamos estas propriedades */
+body {
+  background: #282a36; /* Cor de fundo */
+  font-family: 'Source Sans Pro', sans-serif; /* Definimos o tipo de fonte */
+  color: white;
+}
+header {
+  padding: 32px; /* Superfície ligada diretamente ao conteúdo 
+                    (top/left/bottom/right) */
+  border-bottom: 1px solid #333; /* Cor da borda inferior */
+  background: rgba(0, 0, 0, 0.1); /* Red-green-blue-alpha-opacity
+  o alpha-opacity define a opacidade em uma faixa de valores decimais 
+  de 0 até 1. Opacidade especifica a transparência de um elemento */ 
+}
+.links {
+  text-align: center; /* Alinhamos o texto contido na div ao centro */
+}
+.links a { /* Passamos a referenciar a classe links */
+  color: white; /* Cor branca para o texto contido na tag a */
+  font-size: 18px; /* Definimos um tamanho de 18 pixels para a fonte */
+  line-height: 28px; /* Define a altura do texto. Recomenda-se atribuir */
+                     /* uma quantidade de 10 pixels a mais daquela */
+                     /* atribuída ao tamanho da fonte.*/
+  margin: 0 16px;    /* Margem 0 na parte superior e inferior, e 16 nas */ 
+                     /* laterais */ 
+  text-decoration: none; /* Eliminamos o sublinhado da tag a (link) */
+}
+.links a:hover { /* Quando mover o mouse */
+  color: var(--color-green); /* Definimos uma cor verde para o menu quando movemos 
+                       o mouse sobre ele */
+  transition: color 200ms; /* Tempo da transição para a mudança de cor */
+}                                                       
+#wrapper { /* o # indica um seletor de id  */
+  text-align: center; /* Alinhamento de texto da div wrapper ao centro */ 
+  padding: 32px; /* Espaçamento de todo o conteúdo da div (avatar e textos) */
+}                /* (em cima, em baixo e nas laterais) */ 
+#wrapper img { /* Estiliza a tag img que está dentro da div #wrapper */
+  border-radius: 50%; /* Arredonda as bordas da imagem contida na div wrapper */
+  border: 5px solid var(--color-green); /* Arredonda a imagem da div */
+  margin-bottom: 32px; /* Espaçamento inferior da Margem da imagem da div */
+  height: 300px; /* Altura da imagem */
+}
+#wrapper h1 {
+  font-size: 42px; /* Tamanho da fonte */
+  line-height: 52px; /* Define a altura do texto. Recomenda-se atribuir */
+                     /* uma quantidade de 10 pixels a mais daquela */
+                     /* atribuída ao tamanho da fonte.*/
+  font-weight: bold; /* Peso da fonte */
+}
+#wrapper h2 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+  margin-top: 8px; /* Deixo uma separação entre o h1 e o h2*/
+  opacity: 0.8; /* Deixa a cor do texto um pouco mais leve */
+}
+#wrapper p {
+  max-width: 500px; /* Define o tamanho máximo da linha, fazendo a quebra caso ultrapasse */
+  margin: 32px auto; /* Espaço superior da linha de 32px e */
+                     /* laterais automáticas (centraliza - auto)  */
+  font-size: 24px; 
+  line-height: 34px;
+}
+#wrapper p a { /* Alterar a cor do link */
+  color: var(--color-green);
+}
+#links-footer a {
+  border-bottom: 1px solid var(--color-green); /* Coloca o underline nos links */
+                                               /* GitHub e Linkedin */          
+}
