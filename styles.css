@@ -76,5 +76,7 @@ header {
 }
 #links-footer a {
   border-bottom: 1px solid var(--color-green); /* Coloca o underline nos links */
-                                               /* GitHub e Linkedin */          
+                                               /* GitHub e Linkedin ao não colocar */
+                                               /* o text-decoration: none, como foi*/
+                                               /* colocado no seletor ".links a" */          
 }
