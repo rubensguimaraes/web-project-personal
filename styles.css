@@ -2,6 +2,7 @@
 
 :root {
   --color-green: #50fa7b;
+  --color-site:  #333333;
 }
 
 * { /* Este seletor "*" alcança todos os elementos existentes no html */
@@ -79,4 +80,38 @@ header {
                                                /* GitHub e Linkedin ao não colocar */
                                                /* o text-decoration: none, como foi*/
                                                /* colocado no seletor ".links a" */          
+}
+/*=== CARDS ===*/
+.cards { /* Estilizando a section cards */
+  max-width: 800px; /* Limite máximo de largura */
+  margin: 0 auto;   /* Alinhamento ao centro */
+  display: grid;    /* Insere o container numa grid */
+  grid-template-columns: 1fr 1fr 1fr; /* Define 3 colunas */
+  gap: 20px; /* Espaçamento entre as células de 20px*/
+}
+.card { /* Container que agrupar os vídeos */
+  background-color: var(--color-site); /* Cor de fundo */
+}
+.card__image-container img {
+  width: 100%; /* Ajusta o container da tag img em 100% da largura da tag */ 
+               /* imediatamente superior a ela, ou seja, a tag que contenha */
+               /* uma definição de largura. No nosso caso o seletor .cards */
+               /* que é superior ao .card__image-container img e possui uma */ 
+               /* largura definida */
+}
+/* Veja abaixo uma forma de aplicarmos uma propriedade aos dois seletores abaixo */
+.card__content,
+.card__info {
+  padding: 24px; /* Espaçamento superior e inferior e nas laterais lateral */
+}
+.card__info {
+  display: grid; /* Definimos que o container estará inserido num grid */
+  grid-template-columns: 1fr 1fr; /* Definimos duas colunas (fraction) */ 
+}
+.card__price {
+  background-color: var(--color-site); /* A cor do card__price("Free") é a mesma */
+  filter: brightness(90%); /* No entanto, inserimos um brilho ne grade de 90% */
+  padding: 5px 20px; /* 5px nas partes superior e inferior e 20px nas laterais */
+  border-radius: 20px; /* Borda arredondada para o grid "Free" */
+  text-align: center; /* Texto alinhado ao centro */
 }
