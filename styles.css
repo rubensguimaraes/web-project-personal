@@ -115,3 +115,31 @@ header {
   border-radius: 20px; /* Borda arredondada para o grid "Free" */
   text-align: center; /* Texto alinhado ao centro */
 }
+
+/* === Configurações para a Janela Modal === */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente com uma força de 70% */
+  width: 100%; /* Largura do Modal */
+  height: 100%; /* Altura do Modal */
+  position: fixed; /* Fixa o Modal na tela */
+  top: 0; /* Fixa o Modal numa posição de topo do formulário */
+}
+.modal {
+  background-color: white; /* Cor de fundo branca */
+  width: 90%; /* Largura ocupada de 90% */
+  height: 90%; /* Altura ocupada de 90% */
+  margin: 5vh auto; /* Posição 5vh de alinhamento nas partes superior e inferior e */
+                  /* alinhamento automático (centralizado) nas laterais. */
+                  /* 5vh corresponde a 5px da visão da altura (vh), ou seja, se a */
+                  /* altura da janela for redimensionada será preservado o alinhamento */
+  position: relative; /* Permitirá que a estilização abaixo (.modal .close-modal) */ 
+                  /* referente ao ícone "x" seja relativa a esta janela modal branca */                
+}
+.modal .close-modal {
+  color: black; /* A cor do ícone será preta */
+  position: absolute; /* permite o posicionamento do elemento em qualquer local dentro */
+                    /* do modal definido acima */ 
+  right: 8px; /* Afastamento do canto direito da janela modal branca */
+  top: 8px; /* Afastamento do topo superior direito da janela modal branca */
+  cursor: pointer; /* Transforma o ícone em uma mãozinha quando passamos o mouse sobre ele */
+}
